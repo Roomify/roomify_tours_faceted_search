@@ -18,9 +18,9 @@ function roomify_tours_faceted_search_ctools_plugin_api($module = NULL, $api = N
  */
 function roomify_tours_faceted_search_default_search_api_index() {
   $items = array();
-  $items['default_unit_index'] = entity_import('search_api_index', '{
-    "name" : "Default unit index",
-    "machine_name" : "default_unit_index",
+  $items['tours'] = entity_import('search_api_index', '{
+    "name" : "Tours",
+    "machine_name" : "tours",
     "description" : null,
     "server" : "db",
     "item_type" : "rooms_unit",
@@ -126,145 +126,80 @@ function roomify_tours_faceted_search_default_search_api_server() {
       "min_chars" : 1,
       "partial_matches" : 0,
       "indexes" : {
-        "default_node_index" : {
-          "type" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "type",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "title" : {
-            "table" : "search_api_db_default_node_index_text",
-            "type" : "text",
-            "boost" : "5.0"
-          },
-          "promote" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "promote",
-            "type" : "boolean",
-            "boost" : "1.0"
-          },
-          "sticky" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "sticky",
-            "type" : "boolean",
-            "boost" : "1.0"
-          },
-          "created" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "created",
-            "type" : "date",
-            "boost" : "1.0"
-          },
-          "changed" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "changed",
-            "type" : "date",
-            "boost" : "1.0"
-          },
-          "author" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "author",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
-          "comment_count" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "comment_count",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
-          "search_api_language" : {
-            "table" : "search_api_db_default_node_index",
-            "column" : "search_api_language",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "body:value" : {
-            "table" : "search_api_db_default_node_index_text",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "unit_description_description" : {
-            "table" : "search_api_db_default_node_index_text",
-            "type" : "text",
-            "boost" : "1.0"
-          }
-        },
-        "default_unit_index" : {
+        "tours" : {
           "unit_id" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "unit_id",
             "type" : "integer",
             "boost" : "1.0"
           },
           "type" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "type",
             "type" : "string",
             "boost" : "1.0"
           },
           "name" : {
-            "table" : "search_api_db_default_unit_index_text",
+            "table" : "search_api_db_tours_text",
             "type" : "text",
             "boost" : "1.0"
           },
           "created" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "created",
             "type" : "integer",
             "boost" : "1.0"
           },
           "changed" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "changed",
             "type" : "integer",
             "boost" : "1.0"
           },
           "base_price" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "base_price",
             "type" : "decimal",
             "boost" : "1.0"
           },
           "bookable" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "bookable",
             "type" : "integer",
             "boost" : "1.0"
           },
           "min_sleeps" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "min_sleeps",
             "type" : "integer",
             "boost" : "1.0"
           },
           "max_sleeps" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "max_sleeps",
             "type" : "integer",
             "boost" : "1.0"
           },
           "min_children" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "min_children",
             "type" : "integer",
             "boost" : "1.0"
           },
           "max_children" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "max_children",
             "type" : "integer",
             "boost" : "1.0"
           },
           "status" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "status",
             "type" : "integer",
             "boost" : "1.0"
           },
           "search_api_language" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_tours",
             "column" : "search_api_language",
             "type" : "string",
             "boost" : "1.0"

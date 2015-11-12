@@ -22,9 +22,10 @@ function roomify_tours_faceted_search_default_search_api_index() {
     "name" : "Tours",
     "machine_name" : "tours",
     "description" : null,
-    "server" : "db",
+    "server" : "db1",
     "item_type" : "rooms_unit",
     "options" : {
+      "datasource" : { "bundles" : [] },
       "index_directly" : 0,
       "cron_limit" : "50",
       "fields" : {
@@ -116,17 +117,16 @@ function roomify_tours_faceted_search_default_search_api_index() {
  */
 function roomify_tours_faceted_search_default_search_api_server() {
   $items = array();
-  $items['db'] = entity_import('search_api_server', '{
-    "name" : "DB",
-    "machine_name" : "db",
+  $items['db1'] = entity_import('search_api_server', '{
+    "name" : "DB1",
+    "machine_name" : "db1",
     "description" : "",
     "class" : "search_api_db_service",
     "options" : {
       "database" : "default:default",
-      "min_chars" : 1,
+      "min_chars" : "1",
       "partial_matches" : 0,
-      "indexes" : {
-        "tours" : {
+      "indexes" : { "tours" : {
           "unit_id" : {
             "table" : "search_api_db_tours",
             "column" : "unit_id",
@@ -139,11 +139,7 @@ function roomify_tours_faceted_search_default_search_api_server() {
             "type" : "string",
             "boost" : "1.0"
           },
-          "name" : {
-            "table" : "search_api_db_tours_text",
-            "type" : "text",
-            "boost" : "1.0"
-          },
+          "name" : { "table" : "search_api_db_tours_text", "type" : "text", "boost" : "1.0" },
           "created" : {
             "table" : "search_api_db_tours",
             "column" : "created",

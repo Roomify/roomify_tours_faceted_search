@@ -33,4 +33,4 @@ features[facetapi][] = search_api@tours:block:type
 features[facetapi][] = search_api@tours:block:unit_id
 features[features_api][] = api:2
 features[search_api_index][] = tours
-features[search_api_server][] = db
+features[search_api_server][] = db1

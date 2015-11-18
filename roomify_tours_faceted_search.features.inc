@@ -26,7 +26,7 @@ function roomify_tours_faceted_search_default_search_api_index() {
     "item_type" : "rooms_unit",
     "options" : {
       "datasource" : { "bundles" : [] },
-      "index_directly" : 0,
+      "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
         "base_price" : { "type" : "decimal" },

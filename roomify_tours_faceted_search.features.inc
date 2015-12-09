@@ -11,6 +11,9 @@ function roomify_tours_faceted_search_ctools_plugin_api($module = NULL, $api = N
   if ($module == "facetapi" && $api == "facetapi_defaults") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**

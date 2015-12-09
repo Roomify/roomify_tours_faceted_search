@@ -49,11 +49,11 @@ function roomify_tours_faceted_search_facetapi_default_facet_settings() {
     'name' => '',
     'prefix' => '',
     'suffix' => '',
-    'auto-submit-delay' => '1500',
+    'auto-submit-delay' => '',
     'slider-step' => '1',
     'range_simple' => 10,
     'range_advanced' => '',
-    'round-precision' => '0',
+    'round-precision' => '1',
     'empty_text' => array(
       'value' => '',
       'format' => 'rich_text',
